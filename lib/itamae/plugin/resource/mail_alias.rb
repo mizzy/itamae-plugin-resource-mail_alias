@@ -4,7 +4,7 @@ require 'itamae'
 module Itamae
   module Plugin
     module Resource
-      module MailAlias < Itamae::Resource::Base
+      class MailAlias < Itamae::Resource::Base
         define_attribute :action, default: :create
         define_attribute :mail_alias, type: String, default_name: true
         define_attribute :recipient, type: String, required: true
