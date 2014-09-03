@@ -11,7 +11,7 @@ module Itamae
 
         def action_create(options)
           if !run_specinfra(:check_mail_alias_is_aliased_to, attributes.mail_alias, attributes.recipient)
-            run_specinfra(:add_mail_alias, mail_alias, attributes.recipient)
+            run_specinfra(:add_mail_alias, attributes.mail_alias, attributes.recipient)
           end
         end
       end
